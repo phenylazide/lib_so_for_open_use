@@ -40,6 +40,7 @@ def save_sele_as_ligExp(selection = 'sele'):
 	
 print('start loading all pdb file to pymol')
 pdbs = glob.glob('*.pdb')
+print('pdbs = ', pdbs)
 batch = len(pdbs) if len(pdbs) <= default_batch else default_batch
 pool = multiprocessing.Pool(batch)
 #obj_names = cmd.get_names("all")
@@ -63,6 +64,7 @@ aligned_rm_fold = 'aligned_rm_fold'
 if not os.path.exists(aligned_rm_fold): os.mkdir(aligned_rm_fold)
 obj_names = cmd.get_names("all")
 batch = len(obj_names) if len(obj_names) <= default_batch else default_batch
+print('batch = ', batch)
 pool = multiprocessing.Pool(batch)
 for obj in obj_names:
 	print('obj=',obj)
@@ -77,7 +79,9 @@ cmd.delete('*')
 
 ## preparewizard
 os.chdir(aligned_rm_fold)
-command = 'python /home/phzd/g09E/schrdg/glide0a_prepwized_all.py'
+print('aligned_rm_fold = ', aligned_rm_fold)
+os.system('which python')
+command = 'python /home/admin/lib_so_for_open_use/glide0a_prepwized_all.py'
 os.system(command)
 
 preped_fold = '../preped_fold'

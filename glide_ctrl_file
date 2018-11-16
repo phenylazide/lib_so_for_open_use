@@ -1,0 +1,41 @@
+-NJOBS: 18   ### SP:48=cpu66%,mem26G; XP:can NOT exceed 44 totally; HTVS:58=cpu82%,mem29G
+max_cpu_percent 80   ## now expand to 64G mem
+           
+PRECISION   SP             ### HTVS SP XP
+
+POSTDOCK_NPOSE   10
+POSES_PER_LIG   1
+MAXATOMS   100            ### manually default is 500
+MAXROTBONDS   13          ### manually default is 100
+desired_properties = r_i_docking_score,r_i_glide_ligand_efficiency
+
+sleep_time = 70  ## for small file just 70, but big file(chemdiv) might need 180
+
+##====== for ligprep parameters ===========
+
+NJOBS_ligprep: 40           ## can NOT exceed 50, mem not enought
+sleep_time_ligprep = 60
+
+forcefield_ligprep: opls3     ## opls3 or opls2005
+EPIK_METAL_BINDING:  no      ## yes or no
+     
+##====== end ligprep parameters ========
+
+##====== for mmgbsa parameters ===========
+
+NJOBS_mmgbsa: 50           
+max_cpu_percent_mmgbsa: 80
+sleep_time_mmgbsa = 60
+flexdist: 5.0
+
+     
+##====== end mmgbsa parameters ========
+
+
+##======not often change below ==============
+-HOST localhost:72
+
+##==============
+
+
+

@@ -1,0 +1,46 @@
+# glide
+lib_so_fold='/home/admin/lib_so_for_open_use'
+alias prepwizard='/opt/schrodinger2017-4/utilities/prepwizard'
+alias gld00_split_chains='/home/phzd/g09E/pymol2/./pymol $lib_so_fold/0_pymol_run_script_split_chains.py'
+alias gld01_align_prep='/home/phzd/g09E/pymol2/./pymol $lib_so_fold/1_pymol_alignto_rm_ions_prep.py'
+alias gld02_move_ligExp_to_grid='python $lib_so_fold/2_move_ligExp_to_grid.py'
+alias gld03_move_useless_grid='python $lib_so_fold/3_move_useless_grid_to_no_so_good.py'
+
+alias gld0a_prepwized_all='python $lib_so_fold/glide0a_prepwized_all.py'
+alias gld0b_ligprep_batch='python $lib_so_fold/glide0b_ligprep_batch_run_so.py'
+alias gld0c_redock_ligExp='python $lib_so_fold/glide0c_redock_ligExp_run_so.py'
+alias gld0d_report_rmsd_for_redock='python2 $lib_so_fold/glide0d_report_rmsd_for_redock_run_so.py'
+alias gld0e_ognz_RMSD_report='glide0e_ognz_RMSD_report'
+
+alias gld1a_batch="python $lib_so_fold/glide1a_batch_run_so.py"
+alias gld2="python2 $lib_so_fold/glide2a_post_process_run_so.py && bash $lib_so_fold/glide2b_anal.sh"
+alias gld2a_post_process="python2 $lib_so_fold/glide2a_post_process_run_so.py"
+alias gld2b_anal="bash $lib_so_fold/glide2b_anal.sh"
+alias gld4b_splitSdf_fetchSdf="source activate python27 && python $lib_so_fold/glide4b_splitSdf_fetchSdf_run_so.py"
+
+alias clusterByMCS="source activate python27 && python $lib_so_fold/clusterByMCS_python2_run_so.py"
+
+structcat='/opt/schrodinger2017-4/utilities/structcat'
+alias _structcat=$structcat
+alias _structconvert="/opt/schrodinger2017-4/utilities/structconvert"
+
+## schrodinger
+alias maestro='/opt/schrodinger2017-4/./maestro'
+alias canvas='/opt/schrodinger2017-4/./canvas'
+alias knime='/opt/schrodinger2017-4/./knime'
+
+alias pymol='/home/phzd/g09E/pymol2/./pymol'
+
+##vina
+alias _vina="python $lib_so_fold/vina_VS_0_6.py"
+
+### score and pre_proccess
+#alias _scoreanal="source activate deepchem && python $lib_so_fold/score_anal_plt_0_2d.py"
+alias _scoreanal="source activate deepchem && python $lib_so_fold/score_anal_plt_0_4_run_so.py"
+
+alias _vinapre="source activate deepchem && python $lib_so_fold/vina_pre_process_data_0_2_run_so.py"
+alias _vinaanal="source activate deepchem && python $lib_so_fold/vina_analysis_0_2d_run_so.py"
+
+## pdb_download
+alias pdb_download="python $lib_so_fold/pdb_download_run_so.py"
+

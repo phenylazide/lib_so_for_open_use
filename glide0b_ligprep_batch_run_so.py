@@ -7,7 +7,7 @@ from glide0b_ligprep_batch_lib_so import *
 def main():
 	os.chdir(base)
 	if not os.path.exists('glide_ctrl_file'):
-		os.system("cp /home/phzd/g09E/schrdg/glide_ctrl_file ./")
+		os.system("cp /home/admin/lib_so_for_open_use/glide_ctrl_file ./")
 	input("note: must be sdf filetype\nplease modify the ligprep parameters in glide_ctrl_file, then enter !")		
 	## run the two for in loop. 
 	os.chdir(base)
