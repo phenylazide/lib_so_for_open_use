@@ -10,7 +10,7 @@ alias gld0a_prepwized_all='python $lib_so_fold/glide0a_prepwized_all.py'
 alias gld0b_ligprep_batch='python $lib_so_fold/glide0b_ligprep_batch_run_so.py'
 alias gld0c_redock_ligExp='python $lib_so_fold/glide0c_redock_ligExp_run_so.py'
 alias gld0d_report_rmsd_for_redock='python2 $lib_so_fold/glide0d_report_rmsd_for_redock_run_so.py'
-alias gld0e_ognz_RMSD_report='./glide0e_ognz_RMSD_report'
+alias gld0e_ognz_RMSD_report='lib_so_fold/./glide0e_ognz_RMSD_report'
 
 alias gld1a_batch="python $lib_so_fold/glide1a_batch_run_so.py"
 alias gld2="source activate python27 && python $lib_so_fold/glide2a_post_process_run_so.py && bash $lib_so_fold/glide2b_anal.sh"
