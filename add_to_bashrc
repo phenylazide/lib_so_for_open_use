@@ -13,8 +13,8 @@ alias gld0d_report_rmsd_for_redock='python2 $lib_so_fold/glide0d_report_rmsd_for
 alias gld0e_ognz_RMSD_report='glide0e_ognz_RMSD_report'
 
 alias gld1a_batch="python $lib_so_fold/glide1a_batch_run_so.py"
-alias gld2="python2 $lib_so_fold/glide2a_post_process_run_so.py && bash $lib_so_fold/glide2b_anal.sh"
-alias gld2a_post_process="python2 $lib_so_fold/glide2a_post_process_run_so.py"
+alias gld2="source activate python27 && python $lib_so_fold/glide2a_post_process_run_so.py && bash $lib_so_fold/glide2b_anal.sh"
+alias gld2a_post_process="source activate python27 && python $lib_so_fold/glide2a_post_process_run_so.py"
 alias gld2b_anal="bash $lib_so_fold/glide2b_anal.sh"
 alias gld4b_splitSdf_fetchSdf="source activate python27 && python $lib_so_fold/glide4b_splitSdf_fetchSdf_run_so.py"
 
@@ -43,4 +43,10 @@ alias _vinaanal="source activate deepchem && python $lib_so_fold/vina_analysis_0
 
 ## pdb_download
 alias pdb_download="python $lib_so_fold/pdb_download_run_so.py"
+
+
+#openbabel241
+export PATH=/home/phzd/test/openbabel241/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/phzd/test/openbabel241/lib
+export PYTHONPATH=/home/phzd/test/openbabel241/lib/python2.7/site-packages:$PYTHONPATH
 
